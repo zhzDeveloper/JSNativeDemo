@@ -22,7 +22,23 @@
 //    [self getJSVar];
     
     // 2. 获取定义在JS中的方法, OC调用JS
-        [self ocCallJSFunc];
+//        [self ocCallJSFunc];
+    
+    // 3. JS调用OC的方法
+        [self JSCallOCFunc];
+}
+
+- (void)JSCallOCFunc {
+    //1. 创建JS运行的环境
+    JSContext *context = [[JSContext alloc] init];
+    
+    //2. @selector(eat) 对象类型的值
+    context[@"eat"] = ^(NSString *sm, NSString *string) {
+        NSLog(@"eat call: %@  %@", sm, string);
+    };
+    
+    //3. 执行JS
+    [context evaluateScript:@"eat('aaaa', 'bbbb')"];
 }
 
 - (void)getJSVar {
