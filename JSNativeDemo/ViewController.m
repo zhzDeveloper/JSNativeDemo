@@ -10,6 +10,8 @@
 #import "Person.h"
 #import <objc/runtime.h>
 #import "UILableJSExport.h"
+#import <React/RCTRootView.h>
+#import <React/RCTBundleURLProvider.h>
 
 @import JavaScriptCore;
 
@@ -35,7 +37,20 @@
 //        [self jsCallOCCustomClass];
     
     // 5. JS调用OC的系统类
-        [self jsCallOCSystemClass];
+//        [self jsCallOCSystemClass];
+    
+    // 6. reactNative交互
+    [self callReactNative];
+}
+
+- (void)callReactNative {
+    NSURL *jsonUrl = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsonUrl
+                                                        moduleName:@"JSNativeDemo"
+                                                 initialProperties:@{@"type" : @"1"}
+                                                     launchOptions:nil];
+    rootView.frame = self.view.bounds;
+    [self.view addSubview:rootView];
 }
 
 - (void)jsCallOCSystemClass {
