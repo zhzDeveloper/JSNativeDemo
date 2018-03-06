@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import <objc/runtime.h>
+#import "UILableJSExport.h"
 
 @import JavaScriptCore;
 
@@ -30,7 +32,28 @@
 //        [self JSCallOCFunc];
     
     // 4. JS调用OC的自定义类
-        [self jsCallOCCustomClass];
+//        [self jsCallOCCustomClass];
+    
+    // 5. JS调用OC的系统类
+        [self jsCallOCSystemClass];
+}
+
+- (void)jsCallOCSystemClass {
+    // 给系统类添加协议
+    class_addProtocol([UILabel class], @protocol(UILableJSExport));
+    // 创建UILabel
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 200, 100)];
+    [self.view addSubview:label];
+    
+    // 1. 创建JS运行环境
+    JSContext *context = [[JSContext alloc] init];
+    // JS自动生成label对象
+    context[@"label"] = label;
+    
+    //执行JS代码
+    NSString *jsCode = @"label.text = '显示的什么东西呢'";
+    
+    [context evaluateScript:jsCode];
 }
 
 - (void)jsCallOCCustomClass {

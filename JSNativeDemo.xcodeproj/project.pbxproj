@@ -57,6 +57,7 @@
 		9D52EA06204E982D00FBBFFD /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		9D52EA07204E982D00FBBFFD /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		9D52EA0A204E98D500FBBFFD /* PersonJsExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonJsExport.h; sourceTree = "<group>"; };
+		9D52EA0C204E9CA400FBBFFD /* UILableJSExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILableJSExport.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 				9D52E9DB204E7BAC00FBBFFD /* LaunchScreen.storyboard */,
 				9D52E9DE204E7BAD00FBBFFD /* Info.plist */,
 				9D52E9DF204E7BAD00FBBFFD /* main.m */,
+				9D52EA0B204E9C8B00FBBFFD /* SystemClass */,
 				9D52EA09204E983200FBBFFD /* CustomClass */,
 			);
 			path = JSNativeDemo;
@@ -148,6 +150,14 @@
 				9D52EA0A204E98D500FBBFFD /* PersonJsExport.h */,
 			);
 			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		9D52EA0B204E9C8B00FBBFFD /* SystemClass */ = {
+			isa = PBXGroup;
+			children = (
+				9D52EA0C204E9CA400FBBFFD /* UILableJSExport.h */,
+			);
+			path = SystemClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
