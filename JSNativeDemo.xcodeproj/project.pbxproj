@@ -15,6 +15,7 @@
 		9D52E9E0204E7BAD00FBBFFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D52E9DF204E7BAD00FBBFFD /* main.m */; };
 		9D52E9EA204E7BAD00FBBFFD /* JSNativeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D52E9E9204E7BAD00FBBFFD /* JSNativeDemoTests.m */; };
 		9D52E9F5204E7BAE00FBBFFD /* JSNativeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D52E9F4204E7BAE00FBBFFD /* JSNativeDemoUITests.m */; };
+		9D52EA05204E927400FBBFFD /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D52EA04204E927400FBBFFD /* index.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9D52E9F0204E7BAE00FBBFFD /* JSNativeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSNativeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D52E9F4204E7BAE00FBBFFD /* JSNativeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNativeDemoUITests.m; sourceTree = "<group>"; };
 		9D52E9F6204E7BAE00FBBFFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D52EA04204E927400FBBFFD /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		9D52E9CF204E7BAB00FBBFFD /* JSNativeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9D52EA04204E927400FBBFFD /* index.js */,
 				9D52E9D0204E7BAB00FBBFFD /* AppDelegate.h */,
 				9D52E9D1204E7BAB00FBBFFD /* AppDelegate.m */,
 				9D52E9D3204E7BAB00FBBFFD /* ViewController.h */,
@@ -241,6 +244,7 @@
 				9D52E9DD204E7BAC00FBBFFD /* LaunchScreen.storyboard in Resources */,
 				9D52E9DA204E7BAC00FBBFFD /* Assets.xcassets in Resources */,
 				9D52E9D8204E7BAC00FBBFFD /* Main.storyboard in Resources */,
+				9D52EA05204E927400FBBFFD /* index.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

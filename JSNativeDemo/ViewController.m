@@ -19,7 +19,10 @@
     [super viewDidLoad];
     
     //1. 获取定义在JS中的变量, 并修改
-    [self getJSVar];
+//    [self getJSVar];
+    
+    // 2. 获取定义在JS中的方法, OC调用JS
+        [self ocCallJSFunc];
 }
 
 - (void)getJSVar {
@@ -51,5 +54,22 @@
     }
 }
 
+- (void)ocCallJSFunc {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"index.js" ofType:nil];
+    NSString *jsCode = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"jsCode: %@", jsCode);
+    
+    // 创建JS运行环境
+    JSContext *context = [[JSContext alloc] init];
+    
+    // 执行JS代码
+    [context evaluateScript:jsCode];
+    
+    JSValue *hello = context[@"hello"];
+    
+    // OC 调用JS方法, 获取返回值
+    JSValue *reValue = [hello callWithArguments:@[@"javascript"]];
+    NSLog(@"reValue: %@", reValue);
+}
 
 @end
