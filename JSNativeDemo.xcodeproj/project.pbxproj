@@ -16,6 +16,7 @@
 		9D52E9EA204E7BAD00FBBFFD /* JSNativeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D52E9E9204E7BAD00FBBFFD /* JSNativeDemoTests.m */; };
 		9D52E9F5204E7BAE00FBBFFD /* JSNativeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D52E9F4204E7BAE00FBBFFD /* JSNativeDemoUITests.m */; };
 		9D52EA05204E927400FBBFFD /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D52EA04204E927400FBBFFD /* index.js */; };
+		9D52EA08204E982D00FBBFFD /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D52EA07204E982D00FBBFFD /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		9D52E9F4204E7BAE00FBBFFD /* JSNativeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSNativeDemoUITests.m; sourceTree = "<group>"; };
 		9D52E9F6204E7BAE00FBBFFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D52EA04204E927400FBBFFD /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		9D52EA06204E982D00FBBFFD /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9D52EA07204E982D00FBBFFD /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9D52EA0A204E98D500FBBFFD /* PersonJsExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonJsExport.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 				9D52E9DB204E7BAC00FBBFFD /* LaunchScreen.storyboard */,
 				9D52E9DE204E7BAD00FBBFFD /* Info.plist */,
 				9D52E9DF204E7BAD00FBBFFD /* main.m */,
+				9D52EA09204E983200FBBFFD /* CustomClass */,
 			);
 			path = JSNativeDemo;
 			sourceTree = "<group>";
@@ -133,6 +138,16 @@
 				9D52E9F6204E7BAE00FBBFFD /* Info.plist */,
 			);
 			path = JSNativeDemoUITests;
+			sourceTree = "<group>";
+		};
+		9D52EA09204E983200FBBFFD /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				9D52EA06204E982D00FBBFFD /* Person.h */,
+				9D52EA07204E982D00FBBFFD /* Person.m */,
+				9D52EA0A204E98D500FBBFFD /* PersonJsExport.h */,
+			);
+			path = CustomClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +286,7 @@
 			files = (
 				9D52E9D5204E7BAB00FBBFFD /* ViewController.m in Sources */,
 				9D52E9E0204E7BAD00FBBFFD /* main.m in Sources */,
+				9D52EA08204E982D00FBBFFD /* Person.m in Sources */,
 				9D52E9D2204E7BAB00FBBFFD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

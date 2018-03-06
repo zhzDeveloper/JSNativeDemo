@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
+
 @import JavaScriptCore;
 
 @interface ViewController ()
@@ -25,7 +27,34 @@
 //        [self ocCallJSFunc];
     
     // 3. JS调用OC的方法
-        [self JSCallOCFunc];
+//        [self JSCallOCFunc];
+    
+    // 4. JS调用OC的自定义类
+        [self jsCallOCCustomClass];
+}
+
+- (void)jsCallOCCustomClass {
+    Person *person = [[Person alloc] init];
+    person.name = @"tom";
+    
+    // 1. 创建JS运行环境
+    JSContext *context = [[JSContext alloc] init];
+    
+    // 会在JS中生成person对象, 并且拥有协议定义好的值
+    context[@"Person"] = person;
+    
+    // 执行JS代码
+    NSString *jsCode = @"Person.playGame('足球', '中午')";
+    [context evaluateScript:jsCode];
+    
+    NSString *jsCode2 = @"var name = Person.name";
+    [context evaluateScript:jsCode2];
+    JSValue *name = context[@"name"];
+    NSLog(@"%@", name.toString);
+    
+    NSString *jsCode3 = @"Person.name = '11111'";
+    [context evaluateScript:jsCode3];
+    NSLog(@"%@", person.name);
 }
 
 - (void)JSCallOCFunc {
