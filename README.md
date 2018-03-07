@@ -6,7 +6,7 @@
 的一个包装
 
 # 二. JavaScriptCore框架常用类
-![](media/15203182210057/15203226997681.jpg)
+![](http://p57ht3v8j.bkt.clouddn.com/jsandnative15203226997681.jpg)
 
 1. **JSContext**: JS运行的环境, 为JS代码的执行提供了上下文环境, 并且通过JSContext获取JS的数据
 2. **JSValue**: 用于接受JS中获取的数据类型, 可以使对象, 方法
@@ -153,7 +153,7 @@
     
     [context evaluateScript:jsCode];
 ```
-![](media/15203182210057/15203303790515.jpg)
+![](http://p57ht3v8j.bkt.clouddn.com/jsandnative15203303790515.jpg)
 
 
 
@@ -181,7 +181,7 @@ self.jsContext[@"jsCallNative"] = ^(NSString *paramer){
 
 案例: 
 [JSPatch](https://github.com/bang590/JSPatch/blob/master/JSPatch/JPEngine.m)
-![](media/15203182210057/15203308558232.jpg)
+![](http://p57ht3v8j.bkt.clouddn.com/jsandnative15203308558232.jpg)
 
 
 **ReactNative 中交互**
