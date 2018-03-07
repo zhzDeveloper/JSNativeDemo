@@ -1,6 +1,4 @@
-[参考](https://www.jianshu.com/p/bd7dfd8c9917)
 
-[WWDC2013](https://developer.apple.com/videos/play/wwdc2013/615/)
 
 # 一. 概念
 `JavaScriptCore框架` 是苹果在iOS7引入的框架，该框架让 Objective-C 和 JavaScript 代码直接的交互变得更加的简单方便。
@@ -285,3 +283,6 @@ AppRegistry.registerComponent('JSNativeDemo', () => ContainterView);
 1. 打包生成的jsbundle体积较大(>500k)
 2. 首次加载js较慢
 
+[参考](https://www.jianshu.com/p/bd7dfd8c9917)
+
+[WWDC2013](https://developer.apple.com/videos/play/wwdc2013/615/)
